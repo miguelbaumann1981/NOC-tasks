@@ -12,4 +12,5 @@ PROD=false
 
 3. Ejecutar ``npm install``
 4. Levantar bases de datos ``docker compose up -d``
-5. Ejecutar ``npm run dev```
+5. Ejecutar ``npx prisma migrate dev``
+5. Ejecutar ``npm run dev``

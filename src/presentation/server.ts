@@ -49,19 +49,19 @@ export class Server {
     // })
 
     // CRON
-    CronService.createJob(
-        '*/5 * * * * *',
-        () => {
-            const url: string = 'https://google.com';
-            new CheckServiceMultiple(
-              [fsLogRepository, mongoLogRepository, postgresLogRepository],
-                () => console.log(`${url} is ok`),
-                (error) => console.error(error)
-            ).execute(url);
+    // CronService.createJob(
+    //     '*/5 * * * * *',
+    //     () => {
+    //         const url: string = 'https://google.com';
+    //         new CheckServiceMultiple(
+    //           [fsLogRepository, mongoLogRepository, postgresLogRepository],
+    //             () => console.log(`${url} is ok`),
+    //             (error) => console.error(error)
+    //         ).execute(url);
             
-            // new CheckService().execute('http://localhost:3000');
-        }
-    );
+    //         // new CheckService().execute('http://localhost:3000');
+    //     }
+    // );
 
     // const logs = await logRepository.getLogs(LogSeverityLevel.high);
     // console.log(logs);
